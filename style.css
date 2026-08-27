@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #09090f;
+    color: white;
+    overflow-x: hidden;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.screen {
+    width: 100%;
+    max-width: 500px;
+    min-height: 650px;
+    padding: 45px 28px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 28px;
+
+    box-shadow:
+        0 0 60px rgba(130, 80, 255, 0.12);
+
+    animation: fadeIn 0.6s ease;
+}
+
+.screen.active {
+    display: flex;
+}
+
+.lock {
+    font-size: 65px;
+    margin-bottom: 25px;
+    animation: floating 2s ease-in-out infinite;
+}
+
+.classified {
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #a78bfa;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: 38px;
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.intro,
+.screen > p {
+    color: #b7b7c9;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 14px;
+
+    background: white;
+    color: #111;
+
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.02);
+}
+
+.mission-number {
+    color: #a78bfa !important;
+    font-size: 12px !important;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.question-box {
+    width: 100%;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.question-box p {
+    line-height: 1.6;
+    color: #e5e5ef;
+}
+
+.question-box button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.clue-area {
+    display: flex;
+    gap: 18px;
+    margin-top: 45px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.clue-area span {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.06);
+
+    font-size: 22px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.clue-area span:hover {
+    transform: scale(1.15);
+    background: rgba(167, 139, 250, 0.2);
+}
+
+#clue-message,
+#box-message,
+#final-message {
+    margin-top: 25px;
+    color: #c4b5fd;
+    line-height: 1.6;
+}
+
+.mystery-box {
+    font-size: 90px;
+    margin-top: 45px;
+    cursor: pointer;
+
+    transition: 0.4s;
+    animation: floating 2s ease-in-out infinite;
+}
+
+.mystery-box:hover {
+    transform: scale(1.15) rotate(4deg);
+}
+
+.heart {
+    font-size: 75px;
+    margin-bottom: 20px;
+    animation: heartbeat 1.3s infinite;
+}
+
+.final-text {
+    margin-bottom: 25px;
+}
+
+.final-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.final-buttons button:first-child {
+    background: #a78bfa;
+    color: white;
+}
+
+.final-buttons button:last-child {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+@media (max-width: 500px) {
+
+    .app {
+        padding: 12px;
+    }
+
+    .screen {
+        min-height: 95vh;
+        padding: 35px 20px;
+        border-radius: 22px;
+    }
+
+    h1 {
+        font-size: 31px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .lock {
+        font-size: 55px;
+    }
+}

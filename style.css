@@ -16,25 +16,93 @@ body {
     min-height: 100vh;
     font-family: Arial, sans-serif;
     color: var(--text);
-    background:
-        radial-gradient(circle at 20% 20%, rgba(177, 140, 255, 0.18), transparent 30%),
-        radial-gradient(circle at 80% 80%, rgba(255, 126, 182, 0.16), transparent 30%),
-        #08070d;
     overflow-x: hidden;
+
+    background:
+        radial-gradient(circle at 15% 20%, rgba(177, 140, 255, 0.35), transparent 28%),
+        radial-gradient(circle at 85% 25%, rgba(255, 126, 182, 0.28), transparent 30%),
+        radial-gradient(circle at 50% 90%, rgba(120, 80, 200, 0.25), transparent 35%),
+        #07060d;
+
+    position: relative;
 }
 
-/* Soft stars */
+/* Moving star field */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
+
     pointer-events: none;
-    opacity: 0.5;
+
     background-image:
-        radial-gradient(circle, white 1px, transparent 1px);
-    background-size: 70px 70px;
-    animation: stars 12s linear infinite;
+        radial-gradient(circle, rgba(255,255,255,0.9) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,182,217,0.7) 1px, transparent 1px),
+        radial-gradient(circle, rgba(196,181,253,0.7) 1px, transparent 1px);
+
+    background-size:
+        70px 70px,
+        110px 110px,
+        160px 160px;
+
+    background-position:
+        0 0,
+        30px 50px,
+        80px 20px;
+
+    opacity: 0.65;
+
+    animation: starMove 18s linear infinite;
 }
+
+/* Large dreamy glow */
+body::after {
+    content: "";
+    position: fixed;
+
+    width: 450px;
+    height: 450px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,126,182,0.12),
+            rgba(177,140,255,0.07),
+            transparent 70%
+        );
+
+    filter: blur(20px);
+
+    pointer-events: none;
+
+    animation: dreamyGlow 5s ease-in-out infinite alternate;
+}
+
+@keyframes starMove {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(100px);
+    }
+}
+
+@keyframes dreamyGlow {
+    from {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.15);
+    }
 
 .app {
     min-height: 100vh;

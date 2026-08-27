@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Classified Mission 🔐</title>
+    <title>For Duggu ❤️</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,19 +19,24 @@
 
             <div class="lock">🔐</div>
 
-            <p class="classified">CLASSIFIED</p>
+            <p class="classified">CLASSIFIED • LOVE DIVISION</p>
 
-            <h1>You've been selected.</h1>
+            <h1>Hey, Duggu...</h1>
 
             <p class="intro">
-                A secret mission has been assigned to you.
-                <br>
-                Are you ready to find out why?
+                This isn't an ordinary website.
+                <br><br>
+                It's a little journey I made
+                especially for you. ❤️
             </p>
 
             <button onclick="startMission()">
-                ACCEPT MISSION →
+                BEGIN THE JOURNEY →
             </button>
+
+            <p class="small-note">
+                ⚠️ Only Duggu is authorized to enter.
+            </p>
 
         </section>
 
@@ -40,22 +46,28 @@
 
             <p class="mission-number">MISSION 01</p>
 
-            <h2>Before we continue...</h2>
+            <h2>A little question...</h2>
 
             <p>
-                I need you to answer one very important question.
+                Duggu, do you believe that sometimes
+                one person can make ordinary moments
+                feel really special?
             </p>
 
             <div class="question-box">
-                <p>Do you believe some people enter our life for a reason? 👀</p>
+
+                <p>
+                    What do you think? 👀
+                </p>
 
                 <button onclick="nextScreen(3)">
-                    Maybe... 🤔
+                    Maybe... 🤭
                 </button>
 
                 <button onclick="nextScreen(3)">
-                    Definitely ❤️
+                    Yes, definitely ❤️
                 </button>
+
             </div>
 
         </section>
@@ -66,25 +78,37 @@
 
             <p class="mission-number">MISSION 02</p>
 
-            <h2>Find the hidden clue 🕵️</h2>
+            <h2>Remember this? 🌙</h2>
 
             <p>
-                Somewhere on this screen is the clue.
+                There was that one time...
+                <br><br>
+
+                We kept talking and talking...
                 <br>
-                Look carefully...
+                and somehow,
+                <strong>subeh ho gayi.</strong> 🌅
             </p>
 
-            <div class="clue-area">
+            <div class="memory-card">
 
-                <span>?</span>
-                <span>?</span>
-                <span onclick="findClue()">🔎</span>
-                <span>?</span>
-                <span>?</span>
+                <div class="moon">🌙</div>
+
+                <p>
+                    I don't know when the conversation
+                    became so special...
+                    but I remember not wanting it to end.
+                </p>
+
+                <span>
+                    Some nights become memories. ❤️
+                </span>
 
             </div>
 
-            <p id="clue-message"></p>
+            <button onclick="nextScreen(4)">
+                I REMEMBER... 🥹
+            </button>
 
         </section>
 
@@ -92,14 +116,13 @@
         <!-- SCREEN 4 -->
         <section id="screen4" class="screen">
 
-            <p class="mission-number">MISSION 03</p>
+            <p class="mission-number">FINAL CLUE</p>
 
-            <h2>The Mystery Box 🎁</h2>
+            <h2>One last thing... 💌</h2>
 
             <p>
-                You've made it this far...
-                <br>
-                But there's one final secret.
+                There's something I've been keeping
+                hidden inside this little quest.
             </p>
 
             <div class="mystery-box" onclick="openBox()">
@@ -118,13 +141,50 @@
 
             <p class="classified">MISSION COMPLETE</p>
 
-            <h1>Okay... enough secrets.</h1>
+            <h1>Duggu my love...</h1>
 
             <p class="final-text">
-                There's something I've been wanting to tell you.
+
+                Maybe there was never really a mission.
+
+                <br><br>
+
+                I just wanted an excuse to take you
+                through a few little moments...
+
+                <br><br>
+
+                because somewhere along the way,
+                <strong>you became really special to me.</strong>
+
             </p>
 
-            <h2>Will you give me a chance? 🫶</h2>
+            <div class="final-message-box">
+
+                <p>
+                    I love the way we can talk for hours,
+                    laugh over random things,
+                    and somehow turn a normal night
+                    into a memory I'll remember.
+                </p>
+
+                <p>
+                    And that night when we talked
+                    until morning...
+
+                    <br><br>
+
+                    I think a part of me already knew
+                    how much I liked having you in my life.
+                </p>
+
+            </div>
+
+            <h2>
+                So, Duggu...
+                <br><br>
+                <span>Will you give us a chance? ❤️</span>
+            </h2>
 
             <div class="final-buttons">
 
@@ -133,7 +193,7 @@
                 </button>
 
                 <button onclick="sayNo()">
-                    Let me think... 🙈
+                    I NEED A LITTLE TIME 🙈
                 </button>
 
             </div>
@@ -148,4 +208,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
